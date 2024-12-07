@@ -1,0 +1,13 @@
+%transition {
+  transition: all .5s ease-in;
+}
+
+%flex-basics {
+  display: flex;
+  align-items: center;
+}
+
+%flex-columns {
+  display: flex;
+  flex-direction: column;
+}

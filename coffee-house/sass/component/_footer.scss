@@ -1,0 +1,80 @@
+.footer {
+  padding: 0 40px 40px 40px;
+
+  @include media-mobile-big {
+    padding: 0 16px 16px 16px;
+  }
+}
+
+.footer__wrapper {
+  padding: 100px;
+  background-color: $color-bg-container;
+  border-radius: 40px;
+  @extend %flex-basics;
+  gap: 100px;
+
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 100px;
+  }
+
+  @include media-tablet-horizontal {
+    padding: 100px 60px 102px 60px;
+  }
+
+  @media (max-width: 700px) {
+    gap: 40px;
+  }
+
+  @include media-mobile-big {
+    padding: 60px 16px;
+  }
+}
+
+.footer__social {
+  @extend %flex-columns;
+  width: 530px;
+  gap: 40px;
+
+  @media (max-width: 700px) {
+    @include font($size: 32px);
+    max-width: 100%;
+  }
+}
+
+.social__title {
+  color: $color-text-light;
+
+  @media (max-width: 700px) {
+    font-size: 32px;
+  }
+}
+
+.contacts__title {
+  color: $color-text-light;
+}
+
+.contacts__item {
+  color: $color-text-light;
+}
+
+.contacts__items {
+  @extend %flex-columns;
+  gap: 20px;
+}
+
+.footer__contacts {
+  @extend %flex-columns;
+  gap: 40px;
+}
+
+.social__items {
+  @extend %flex-basics;
+  gap: 12px;
+}

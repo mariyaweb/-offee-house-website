@@ -1,0 +1,560 @@
+.header__logo-link a {
+  cursor: pointer;
+}
+
+.header__menu {
+  position: relative;
+  width: 72px;
+  @include font($size: 16px, $height: 150%);
+
+  &::before {
+    position: absolute;
+    content: url(../../assets/img/coffee-cup.png);
+    left: 53px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+.item-menu {
+  display: none;
+}
+
+.header__item.item-menu {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 14px;
+    background-color: $color-bg-body;
+
+
+    &::before {
+      content: '';
+      display: block;
+      background-image: url(../../assets/img/coffee-cup.svg);
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.item-menu.link-active a {
+  @media (max-width: 768px) {
+    pointer-events: none;
+  }
+}
+
+.link {
+  position: relative;
+  height: 30px;
+  cursor: pointer;
+
+
+  &::after {
+    content: "";
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: $color-border-dark;
+    transition: all 1s;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+
+
+  @include hover-desktop {
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+.header__menu a {
+  cursor: pointer;
+}
+
+.link-active a {
+
+  @include hover-desktop {
+    &:hover {
+      cursor: default;
+    }
+  }
+
+
+  &::after {
+    content: "";
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 2px;
+    background-color: $color-border-dark;
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  display: flex;
+  @extend %flex-basics;
+  justify-content: center;
+  height: 64px;
+  width: 200px;
+  padding: 20px 0;
+  background-color: $color-bg-body;
+  border-radius: 100px;
+  @include font($size: 16px, $height: 150%, $color: $color-text-dark);
+  cursor: pointer;
+
+
+  span {
+    transform: translateX(9px);
+    transition: all 0.8s;
+  }
+
+
+  .btn-icon {
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  @include hover-desktop {
+    &:hover {
+      span {
+        transform: translateX(-8px);
+      }
+
+      .btn-icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include media-tablet-horizontal {
+    span {
+      transform: translateX(-6px);
+    }
+
+    .btn-icon {
+      opacity: 1;
+      object-position: 2px top;
+    }
+  }
+}
+
+.slider__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid $color-border-dark;
+  border-radius: 100%;
+  background: 50% 50% no-repeat;
+  transition: all .5s;
+  cursor: pointer;
+  flex: 0 0 60px;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
+
+
+  @include hover-desktop {
+    &:hover {
+      background-color: $color-bg-container;
+
+      path {
+        stroke: $color-text-light !important;
+
+      }
+    }
+  }
+
+
+
+
+}
+
+.controls {
+  @extend %flex-basics;
+  justify-content: center;
+  gap: 12px;
+
+}
+
+progress {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+}
+
+progress[value] {
+  background: $color-border-dark;
+  border-radius: 100px;
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 100px;
+  background: $color-border-light;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: $color-border-dark;
+  border-radius: 100px;
+}
+
+progress[value]::-moz-progress-bar {
+  border-radius: 100px;
+  background: $color-border-light;
+}
+
+progress:not([value]) {
+  border-radius: 100px;
+  background-color: $color-border-light;
+}
+
+progress:not([value])::-webkit-progress-bar {
+  border-radius: 100px;
+  background-color: $color-border-light;
+}
+
+progress:not([value])::-webkit-progress-value {
+  background-color: $color-border-dark;
+  border-radius: 100px;
+}
+
+progress:not([value])::-moz-progress-bar {
+  border-radius: 100px;
+  background-color: $color-border-light;
+}
+
+.mobile-app__btns {
+  @extend %flex-basics;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+
+.mobile-app__btn {
+  position: relative;
+  @extend %flex-columns;
+  justify-content: center;
+  width: 200px;
+  height: 64px;
+  border: 1px solid $color-border-dark;
+  border-radius: 100px;
+  padding: 12px 44px 12px 64px;
+  cursor: pointer;
+  transition: all 1s;
+
+
+
+  @include hover-desktop {
+    &:hover {
+      background-color: $color-bg-container;
+
+      .mobile-app__caption {
+        color: $color-text-light;
+      }
+
+      .mobile-app__name {
+        color: $color-text-light;
+      }
+
+      .ico-dark {
+        opacity: 0;
+      }
+    }
+  }
+
+
+}
+
+
+.mobile-app__caption {
+  width: 92px;
+  @include font($size: 10px, $height: 140%);
+}
+
+.mobile-app__name {
+  width: 92px;
+  @include font($size: 16px, $height: 150%);
+}
+
+
+
+.mobile-app__ico {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.contacts__item a {
+  @include font($size: 16px, $height: 150%, $color: $color-text-light);
+  position: relative;
+  padding-left: 27px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: $color-text-light;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+  }
+
+  &::before {
+    position: absolute;
+    top: -3px;
+    left: -2px;
+  }
+
+  @include hover-desktop {
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.adress {
+  &::before {
+    content: url(../../assets/img/pin-alt.svg);
+  }
+
+}
+
+.phone {
+  &::before {
+    content: url(../../assets/img/phone.svg);
+  }
+}
+
+.hours {
+  @include font($size: 16px, $height: 150%, $color: $color-text-light);
+  position: relative;
+  padding-left: 27px;
+  cursor: default;
+
+  &::before {
+    content: url(../../assets/img/clock.svg);
+    position: absolute;
+    top: -1px;
+    left: -2px;
+  }
+}
+
+
+
+.social__item {
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid $color-border-light;
+  transition: all 0.5s;
+
+  @include hover-desktop {
+    &:hover {
+      background-color: $color-bg-body;
+
+      .social__item-dark {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.social__item-dark {
+  position: absolute;
+  opacity: 0;
+  top: 18px;
+  left: 18px;
+}
+
+.social__item-light {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.tab__item {
+  padding: 8px 16px 8px 8px;
+  border: 1px solid $color-border-light;
+  @extend %flex-basics;
+  gap: 8px;
+  border-radius: 100px;
+  cursor: default;
+  transition: all 0.5s;
+}
+
+.tab__item-disabled {
+
+  @include hover-desktop {
+    &:hover {
+      cursor: pointer;
+      background-color: #665F55;
+
+      .tab__icon {
+        background-color: $color-bg-body;
+      }
+
+      .tab__item {
+        background-color: $color-bg-container;
+      }
+
+      .tab__text {
+        color: $color-text-light;
+      }
+    }
+  }
+}
+
+.tab__icon {
+  @extend %flex-basics;
+  justify-content: center;
+  border: 1px solid $color-border-light;
+  background-color: $color-border-light;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+
+}
+
+.tab__item-active {
+  background-color: $color-bg-container;
+
+  .tab__icon {
+    background-color: $color-bg-body;
+  }
+
+  .tab__text {
+    color: $color-text-light;
+  }
+}
+
+.tab__text {
+  font-weight: 400;
+}
+
+
+.btn-refresh {
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid $color-border-dark;
+
+    &-hidden {
+      display: none;
+    }
+  }
+}
+
+.options__btns {
+  @extend %flex-basics;
+  gap: 8px;
+  flex-wrap: wrap;
+
+}
+
+.option__btn {
+  @extend %flex-basics;
+  height: 46px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid #C1B6AD;
+  gap: 8px;
+  border-radius: 100px;
+  cursor: default;
+  transition: all 0.5s;
+
+  .option__ico {
+    @extend %flex-basics;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: $color-border-light;
+  }
+
+  p {
+    font-weight: 600;
+  }
+}
+
+.option__btn-active {
+  background-color: $color-bg-container;
+
+  p {
+    color: $color-text-light;
+  }
+}
+
+.option__btn-disabled {
+  background-color: $color-bg-body;
+
+  p {
+    color: $color-text-dark;
+  }
+
+  @include hover-desktop {
+    &:hover {
+      background-color: $color-bg-container;
+
+      p {
+        color: $color-text-light;
+      }
+    }
+  }
+}
+
+.products__btn {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 78px;
+  align-self: stretch;
+  border: 1px solid $color-border-dark;
+  border-radius: 100px;
+  @include font($size: 16px, $height: 150%, $weight: 600);
+  transition: all 0.5s;
+
+  @include hover-desktop {
+    &:hover {
+      background-color: $color-bg-container;
+      color: $color-text-light;
+    }
+  }
+}

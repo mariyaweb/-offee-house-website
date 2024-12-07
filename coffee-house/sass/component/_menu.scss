@@ -1,0 +1,133 @@
+.menu {
+  padding: 0px 40px 0 40px;
+}
+
+.menu__wrapper {
+  @extend %flex-columns;
+  align-items: center;
+  gap: 40px;
+
+  @include media-tablet {
+    max-width: 688px;
+    padding-bottom: 100px;
+  }
+
+  @include media-mobile-big {
+    max-width: 480px;
+  }
+}
+
+.menu__title {
+  @include font($size: 60px, $color: $color-text-dark);
+  max-width: 800px;
+  text-align: center;
+
+  @media (max-width: 560px) {
+    font-size: 48px;
+  }
+
+  @include media-mobile-big {
+    font-size: 32px;
+  }
+}
+
+.menu__tabs {
+  @extend %flex-basics;
+  gap: 16px;
+
+  @include media-mobile-big {
+    gap: 8px;
+  }
+}
+
+
+.menu__conteiner {
+  @extend %flex-columns;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.menu__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 0px 100px 0px;
+  justify-content: space-between;
+
+  @include media-tablet {
+    padding: 0 14px 100px 14px;
+    height: 1052px;
+    overflow: hidden;
+
+    &.menu__cards-visible {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: 2144px;
+    justify-content: center;
+
+    .menu__cards-visible {
+      height: auto;
+    }
+  }
+}
+
+
+
+.card__item {
+  width: 310px;
+  height: 506px;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 1px solid $color-border-light;
+  @extend %flex-columns;
+
+  @include hover-desktop {
+    &:hover {
+      cursor: pointer;
+
+      .card__img img {
+        transform: scale(90%);
+      }
+    }
+  }
+
+}
+
+.card__img {
+  @extend %flex-basics;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 40px;
+  height: 310px;
+
+  img {
+    display: block;
+    width: 340px;
+    height: 340px;
+    transition: all 1s;
+  }
+}
+
+.description__item {
+  @extend %flex-columns;
+  gap: 12px;
+}
+
+.card__subtitle {
+  @include font($size: 16px, $height: 150%, $weight: 400);
+}
+
+.card__price {
+  @include font($size: 24px, $height: 125%, $weight: 600);
+}
+
+.description__row {
+  height: 196px;
+  @extend %flex-columns;
+  padding: 20px;
+  justify-content: space-between;
+}

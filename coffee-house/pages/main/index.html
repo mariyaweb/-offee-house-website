@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="icon" href="../../assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <title>Coffee House</title>
+</head>
+
+<body>
+  <header class="header ">
+    <div class="wrapper">
+      <div class="header__row">
+        <div class="header__logo header__logo-main">
+          <a class="header__logo">
+            <img src="../../assets/img/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header__burger" id="#burger">
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item link">
+              <a href="#favorite">Favorite coffee</a>
+            </li>
+            <li class="header__item link"><a href="#about">About</a></li>
+            <li class="header__item link"><a href="#mobile">Mobile app</a></li>
+            <li class="header__item link"><a href="#contact">Contact us</a></li>
+          </ul>
+          <div class="header__item item-menu link"><a href="../../pages/menu/index.html">Menu</a></div>
+        </nav>
+
+        <div class="header__menu link"><a href="../../pages/menu/index.html">Menu</a></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="enjoy">
+      <div class="wrapper enjoy__wrapper">
+        <video class="enjoy__video" src="../../assets/video.webm" type="video/mp4" autoplay loop muted></video>
+        <div class="enjoy__content">
+          <h1>
+            <span class="txt-accent">Enjoy</span> premium coffee at our charming cafe
+          </h1>
+          <p class="enjoy__description">
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee House Resource is a popular destination for coffee lovers
+            and those seeking a warm and inviting space to enjoy their
+            favorite beverage.
+          </p>
+          <a class="enjoy__btn btn-primary" href="../../pages/menu/index.html"><span class=btn__name>Menu</span><img
+              class="btn-icon" src="../../assets/img/coffee-cup.png" alt="coffee-cup"></a>
+        </div>
+      </div>
+    </section>
+    <section class="favorite" id="favorite">
+      <h2 class="favorite__title">Choose your <span class="txt-accent">favorite</span> coffee</h2>
+      <div class="favorite__wrapper wrapper">
+        <div class="favorite__slider slider">
+          <div class="slider__arrow arrow__left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="slider__wrapper">
+            <div class="slider__container"></div>
+          </div>
+          <div class="slider__arrow arrow__right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="favorite__controls controls">
+        <progress value="0" min="0" max="100" class="controls__item controls-active" data-controls='0'></progress>
+        <progress value="0" min="0" max="100" class="controls__item" data-controls='1'></progress>
+        <progress value="0" min="0" max="100" class="controls__item" data-controls='2'></progress>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="wrapper about__wrapper">
+        <h2 class="about__title">Resource is <span class="txt-accent">the perfect and cozy place</span> where you can
+          enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+        <div class="about__galery galery">
+          <div class="galery__column">
+            <div class="galery__item img-large"><img src="../../assets/img/about-1.png" alt="photo of the coffee">
+            </div>
+            <div class="galery__item img-small"><img src="../../assets/img/about-2.png" alt="photo of the coffee">
+            </div>
+          </div>
+          <div class="galery__column">
+            <div class="galery__item img-small"><img src="../../assets/img/about-3.png" alt="photo of the coffee">
+            </div>
+            <div class="galery__item img-large"><img src="../../assets/img/about-4.png" alt="photo of the coffee">
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <section class="mobile-app" id="mobile">
+      <div class="wrapper mobile-app__wrapper">
+        <div class="mobile-app__conteiner">
+          <h2 class="mobile-app__title"><span class="txt-accent">Download</span> our apps to start ordering</h2>
+          <p class="mobile-app__subtitle">Download the Resource app today and experience the comfort of ordering your
+            favorite coffee from wherever you are</p>
+          <div class="mobile-app__btns">
+            <div class="mobile-app__btn btn-apple">
+              <img class="mobile-app__ico ico-light" src="../../assets/img/apple-light.svg" alt="App Store">
+              <img class="mobile-app__ico ico-dark" src="../../assets/img/apple-dark.svg" alt="App Store">
+              <p class="mobile-app__caption">Available on the</p>
+              <p class="mobile-app__name">App Store</p>
+            </div>
+            <div class="mobile-app__btn btn-google">
+              <img class="mobile-app__ico ico-light" src="../../assets/img/google-light.svg" alt="App Store">
+              <img class="mobile-app__ico ico-dark" src="../../assets/img/google-dark.svg" alt="App Store">
+              <p class="mobile-app__caption">Available on</p>
+              <p class="mobile-app__name">Google Play</p>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-app__img"><img src="../../assets/img/mobile-screens.png" alt="mobile-screens"></div>
+
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="contact">
+    <div class="wrapper footer__wrapper">
+      <div class="footer__social social">
+        <h2 class="social__title">Sip, Savor, Smile. <span class="txt-accent">It’s coffee time!</span></h2>
+        <div class="social__items">
+          <div class="social__item ico-twitter"><a href="https://twitter.com/?lang=ru" target="_blank">
+              <img src="../../assets/img/twitter.svg" alt="twitter" class="social__item-light">
+              <img src="../../assets/img/twitter-dark.svg" alt="twitter" class="social__item-dark">
+            </a></div>
+          <div class="social__item ico-instagram"><a href="https://www.instagram.com/?hl=ru" target="_blank">
+              <img src="../../assets/img/instagram.svg" alt="instagram" class="social__item-light">
+              <img src="../../assets/img/instagram-dark.svg" alt="instagram" class="social__item-dark">
+            </a>
+          </div>
+          <div class="social__item ico-facebook"><a href="https://www.facebook.com/" target="_blank">
+              <img src="../../assets/img/facebook.svg" alt="facebook" class="social__item-light">
+              <img src="../../assets/img/facebook-dark.svg" alt="facebook" class="social__item-dark">
+            </a></div>
+        </div>
+      </div>
+      <div class="footer__contacts contacts">
+        <h3 class="contacts__title">Contact us</h3>
+        <div class="contacts__items">
+          <div class="contacts__item"><a href=" https://goo.gl/maps/a4rPw12GvDGtf81ZA" target="_blank"
+              class="adress">8558 Green Rd., LA</a></div>
+          <div class="contacts__item"><a href="tel:+16035550123" class="phone">+1 (603) 555-0123</a></div>
+          <div class="contacts__item hours">Mon-Sat: 9:00 AM – 23:00 PM</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>

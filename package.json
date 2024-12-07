@@ -1,0 +1,24 @@
+{
+  "name": "mariyaweb-jsfe2023q4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/pages/main.scss:src/pages/main/style.css src/sass/pages/menu.scss:src/pages/menu/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server -w coffee-house/assets/products.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/mariyaweb-JSFE2023Q4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/mariyaweb-JSFE2023Q4/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/mariyaweb-JSFE2023Q4#readme",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

@@ -1,0 +1,40 @@
+.favorite {
+  @extend %flex-columns;
+  padding: 100px 40px;
+  gap: 40px;
+
+  @include media-mobile-big {
+    padding: 100px 0;
+  }
+}
+
+.favorite__title {
+  text-align: center;
+}
+
+.favorite__wrapper {
+  width: 100%;
+  padding: 0 4px;
+
+  @include media-tablet-horizontal {
+    padding: 0;
+  }
+
+  @include media-mobile-big {
+    padding: 0 16px;
+  }
+}
+
+.favorite__slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 680px) {
+    justify-content: center;
+  }
+}
+
+.slider__description {
+  text-align: center;
+}

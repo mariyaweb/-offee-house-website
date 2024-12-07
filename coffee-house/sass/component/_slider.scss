@@ -1,0 +1,39 @@
+.slider__wrapper {
+  position: relative;
+  width: 480px;
+  overflow: hidden;
+
+  @media (max-width: 680px) {
+    width: 348px;
+  }
+}
+
+.slider__container {
+  display: flex;
+  width: 300%;
+  transition: all 1s;
+}
+
+
+
+
+.slider__item {
+  cursor: default;
+  @extend %flex-columns;
+  align-items: center;
+  justify-content: center;
+  max-width: 480px;
+  gap: 16px;
+}
+
+.slider__img {
+  max-height: 480px;
+
+  @media (max-width: 680px) {
+    max-height: 348px;
+  }
+}
+
+.slider__title {
+  margin: 5px 0 0 0;
+}

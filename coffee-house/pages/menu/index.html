@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="icon" href="../../assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <title>Menu: coffee</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__row">
+        <div class="header__logo header__logo-link">
+          <a href="https://rolling-scopes-school.github.io/mariyaweb-JSFE2023Q4/coffee-house/pages/main/"
+            class="header__logo">
+            <img src="../../assets/img/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header__burger" id="#burger">
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item link">
+              <a href="../../pages/main/index.html#favorite">Favorite coffee</a>
+            </li>
+            <li class="header__item link"><a href="../../pages/main/index.html#about">About</a>
+            </li>
+            <li class="header__item link"><a href="../../pages/main/index.html#mobile">Mobile
+                app</a></li>
+            <li class="header__item link"><a href="#contact">Contact
+                us</a></li>
+          </ul>
+          <div class="header__item item-menu link-active"><a href="../../pages/menu/index.html">Menu</a></div>
+        </nav>
+        <div class="header__menu link-active"><a href="#">Menu</a></div>
+      </div>
+    </div>
+  </header>
+  <section class="menu">
+    <div class="wrapper menu__wrapper">
+      <h1 class="menu__title">Behind each of our cups hides an <span class="txt-accent">amazing surprise</span> </h1>
+      <div class="menu__conteiner">
+        <div class="menu__tabs tab">
+          <div class="tab__item tab__item-active" data-category="coffee">
+            <div class="tab__icon "><img src="../../assets/img/coffee.png" alt="coffee"></div>
+            <p class="tab__text ">Coffee</p>
+          </div>
+          <div class="tab__item tab__item-disabled" data-category="tea">
+            <div class="tab__icon "><img src="../../assets/img/kettle.png" alt="kettle"></div>
+            <p class="tab__text ">Tea</p>
+          </div>
+          <div class="tab__item tab__item-disabled" data-category="dessert">
+            <div class="tab__icon "><img src="../../assets/img/cake.png" alt="cake"></div>
+            <p class="tab__text ">Dessert</p>
+          </div>
+        </div>
+        <div class="menu__cards card">
+        </div>
+        <div class="menu__refresh btn-refresh">
+          <img src="../../assets/img/refresh.svg" alt="refresh button">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer" id="contact">
+    <div class="wrapper footer__wrapper">
+      <div class="footer__social social">
+        <h2 class="social__title">Sip, Savor, Smile. <span class="txt-accent">It’s coffee time!</span></h2>
+        <div class="social__items">
+          <div class="social__item ico-twitter"><a href="https://twitter.com/?lang=ru" target="_blank">
+              <img src="../../assets/img/twitter.svg" alt="twitter" class="social__item-light">
+              <img src="../../assets/img/twitter-dark.svg" alt="twitter" class="social__item-dark">
+            </a></div>
+          <div class="social__item ico-instagram"><a href="https://www.instagram.com/?hl=ru" target="_blank">
+              <img src="../../assets/img/instagram.svg" alt="instagram" class="social__item-light">
+              <img src="../../assets/img/instagram-dark.svg" alt="instagram" class="social__item-dark">
+            </a>
+          </div>
+          <div class="social__item ico-facebook"><a href="https://www.facebook.com/" target="_blank">
+              <img src="../../assets/img/facebook.svg" alt="facebook" class="social__item-light">
+              <img src="../../assets/img/facebook-dark.svg" alt="facebook" class="social__item-dark">
+            </a></div>
+        </div>
+      </div>
+      <div class="footer__contacts contacts">
+        <h3 class="contacts__title">Contact us</h3>
+        <div class="contacts__items">
+          <div class="contacts__item"><a href=" https://goo.gl/maps/a4rPw12GvDGtf81ZA" target="_blank"
+              class="adress">8558
+              Green Rd., LA</a></div>
+          <div class="contacts__item"><a href="tel:+16035550123" class="phone">+1 (603) 555-0123</a></div>
+          <div class="contacts__item hours">Mon-Sat: 9:00 AM – 23:00 PM</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="#modal" class="modal modal-hide">
+    <div class="modal__wrapper">
+
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
